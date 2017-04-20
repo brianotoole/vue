@@ -1,15 +1,23 @@
 <template>
   <div id="app">
-    <header class="header">
+    
+    <nav class="nav has-shadow">
       <div class="container">
-        <nav class="nav">
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/users/1">Users 1</router-link></li>
-          <li><router-link to="/users/2">Users 2</router-link></li>
-        </nav>
-      </div>
-    </header>
-    <router-view></router-view>
+        <div class="nav-left">
+          <router-link to="/" class="nav-item logo">LOGO</router-link>
+          <router-link to="/" class="nav-item is-tab">Home</router-link>
+          <router-link to="/users/:1" class="nav-item is-tab">Users 1</router-link>
+          <router-link to="/users/:2" class="nav-item is-tab">Users 2</router-link>
+        </div><!--/.nav-left-->
+        <span class="nav-toggle"><span></span><span></span><span></span></span>
+        <div class="nav-right nav-menu">
+          <a class="nav-item is-tab">item</a>
+          <a class="nav-item is-tab">item</a>
+        </div><!--/.nav-right-->
+      </div><!--/.container-->
+    </nav>
+    
+  <router-view></router-view>
   </div>
 </template>
 

@@ -1,9 +1,15 @@
 <template>
-  <div>
-    <h1>Users page</h1>
-    <p><strong>User Id:</strong> {{ $route.params.userId }}</p>
-    <button @click="goHome">Back to Homepage</button>
-  </div>
+<div>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Users</h1>
+        <h2 class="subtitle"><strong>User Id:</strong> {{ $route.params.userId }}</h2>
+        <button @click="goHome">Back to Homepage</button>
+      </div>
+    </div>
+  </section>
+</div>
 </template>
 
 <script>
