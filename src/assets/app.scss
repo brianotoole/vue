@@ -1,9 +1,12 @@
-// variables
+// IMPORTS
+@import 'mixins';
+
+// VARIABLES
 $primary: #ccc;
 $secondary: #307fe2;
 $black: #222;
 
-// global app
+// GLOBALS
 body {
   margin: 0;
   padding: 0;
