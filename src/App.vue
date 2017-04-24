@@ -1,24 +1,20 @@
 <template>
   <div id="app">
 
-    <nav class="nav has-shadow">
-      <div class="container">
-        <div class="nav-left">
-          <router-link to="/" class="nav-item logo">LOGO</router-link>
-          <router-link to="/" class="nav-item is-tab is-hidden-mobile">Home</router-link>
-          <router-link to="/users/:1" class="nav-item is-tab is-hidden-mobile">Users 1</router-link>
-          <router-link to="/users/:2" class="nav-item is-tab is-hidden-mobile">Users 2</router-link>
-        </div><!--/.nav-left-->
-        <span class="nav-toggle"><span></span><span></span><span></span></span>
-        <div class="nav-right nav-menu">
-          <a class="nav-item is-tab is-hidden-mobile">item</a>
-          <a class="nav-item is-tab is-hidden-mobile">item</a>
-        </div><!--/.nav-right-->
-      </div><!--/.container-->
+    <nav class="nav">
+      <div class="nav-left">
+        <router-link to="/" class="nav-item logo">LOGO</router-link>
+      </div><!--/.nav-left-->
+      <div class="nav-right">
+        <router-link to="/" class="nav-item is-tab is-hidden-mobile">Home</router-link>
+        <router-link to="/users/:1" class="nav-item is-tab is-hidden-mobile">Users 1</router-link>
+        <router-link to="/users/:2" class="nav-item is-tab is-hidden-mobile">Users 2</router-link>
+      </div><!--/.nav-right-->
     </nav>
 
   <router-view></router-view>
-  </div>
+
+</div><!--/.app-->
 </template>
 
 <script>
@@ -41,13 +37,27 @@ export default {
   border-bottom: 1px solid $primary;
 }
 .nav {
-  li {
-    display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  padding: calc-em(20px) calc-em(10px);
+  background-color: $black;
+  .nav-left,
+  .nav-right {
+    width: 100%;
   }
-  li a {
-    padding: calc-em(10px);
-    color: $secondary;
+  @include breakpoint(md) {
+    .nav-left {
+      width: 33.333%;
+    }
+    .nav-right {
+      width: auto;
+      margin-left: auto;
+    }
+  }
+  a {
+    color: $white;
     text-decoration: none;
+    padding: 0 calc-em(20px);
   }
 }
 </style>
