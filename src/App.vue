@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    
+
     <nav class="nav has-shadow">
       <div class="container">
         <div class="nav-left">
@@ -16,7 +16,7 @@
         </div><!--/.nav-right-->
       </div><!--/.container-->
     </nav>
-    
+
   <router-view></router-view>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import './assets/app.scss';
+@import './assets/scss/app.scss';
 .header {
   width: 100%;
   margin: 0;

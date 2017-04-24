@@ -1,5 +1,4 @@
 // IMPORTS
-@import '../node_modules/bulma/css/bulma.css'; //bulma.io/documentation
 @import 'mixins';
 
 // VARIABLES
@@ -9,6 +8,7 @@ $black: #222;
 
 // GLOBALS
 body {
+  background: $primary;
   margin: 0;
   padding: 0;
   width: 100%;
